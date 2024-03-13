@@ -12,6 +12,7 @@ fi
 
 # Create the user with a home directory
 useradd -m "$USERNAME"
+usermod -aG sudo "$USERNAME"
 
 # Check if useradd command was successful
 if [ $? -eq 0 ]; then
