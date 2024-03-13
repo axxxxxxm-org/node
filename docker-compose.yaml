@@ -4,6 +4,7 @@ services:
   axxxxxxm_node:
     image: docker.io/lunacrafts/axxxxxxm-core:latest
     platform: linux/x86_64
+    network_mode: host
     ports:
       - "2020:2020"
       - "8095:8095"
