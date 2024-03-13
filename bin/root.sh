@@ -1,3 +1,3 @@
 #!/bin/sh
 
-./bin/root/create_runner.sh
+./root/create_runner.sh
