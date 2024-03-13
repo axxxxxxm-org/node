@@ -1,0 +1,15 @@
+version: "3.3"
+
+services:
+  axxxxxxm_node:
+    image: docker.io/lunacrafts/axxxxxxm-core:latest
+    platform: linux/x86_64
+    ports:
+      - "2020:2020"
+      - "8095:8095"
+    env_file:
+      - .env
+    volumes:
+      - ./witness_node_data_dir:/witness_node_data_dir
+    command: |
+      /usr/local/bin/witness_node --rpc-endpoint=0.0.0.0:8095 --p2p-endpoint=0.0.0.0:2020
